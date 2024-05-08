@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -38,7 +38,7 @@ import { MatButtonModule } from '@angular/material/button';
     DashbordMedicalComponent,
     MlMedicalComponent,
     DashbordPrepPhysiqueComponent,
-    MlPrepPhysiqueComponent
+    MlPrepPhysiqueComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +53,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     FormsModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

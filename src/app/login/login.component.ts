@@ -1,9 +1,11 @@
 import { User } from './../Model/User';
 import { AuthConfigService } from './../Service/auth-config.service';
 import { UserAuthService } from './../Service/user-auth.service';
-import { Component } from '@angular/core';
+import { Component, Injector  } from '@angular/core';
 import {  Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { InscriptionPopupComponent } from '../inscription-popup/inscription-popup.component';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +13,22 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private userAuthService:UserAuthService,private authConfigService:AuthConfigService,private r:Router){}
+  constructor(private userAuthService:UserAuthService,private authConfigService:AuthConfigService,private r:Router,private injector: Injector){}
+
+  openPopup(): void {
+    const dialog = this.injector.get(MatDialog);
+    dialog.open(InscriptionPopupComponent, {
+      width: '800px'
+    });
+  }
+  
+
   user!:User;
   
   ngOnInit(){
-   
+    this.openPopup();
   }
+  
   login(t7:NgForm){
    this.user=new User();
    this.user.email=t7.controls["email"].value;
@@ -44,5 +56,7 @@ export class LoginComponent {
    },
   )
   }
+  
+  
  
 }

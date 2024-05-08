@@ -14,7 +14,11 @@
       <input ngModel name="password" type="password" placeholder="Mot de passe"/>
 
       <button type="submit">Connexion</button>
-      <p>Pas encore membre ? <span class="signup">S'inscrire</span></p>
+      <p>Pas encore membre ? <a (click)="openPopup()">S'inscrire</a></p>
+
+     
+      
+
     </div>
     </form>
   </div>
