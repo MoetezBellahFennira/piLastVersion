@@ -4,6 +4,19 @@ body {
     font-family: 'Inter';
     border: none;
     outline: auto;
+
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+  .input-error {
+    border-color: #ff0000; /* Red border for input fields with errors */
+  }
+  
+  /* CSS for error messages */
+  .error-message {
+    color: #ff0000; /* Red color for error messages */
+    font-size: 1.1em; /* Adjust font size as needed */
+    margin-top: 5px; /* Add some space between input field and error message */
+    margin-left: 50px;
   }
 .vid-container {
     margin-top:auto ;

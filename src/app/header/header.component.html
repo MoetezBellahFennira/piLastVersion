@@ -1,7 +1,7 @@
 <!-- menu -->
 <nav>
-  <div style="position: absolute; right: 0;padding-top: 48px;">
-    <img src="../../assets/side-menu.png" style="width: 50px;position: absolute;">
+  <div style="position: absolute; right: 0;padding-top: 373px;">
+    <img src="../../assets/menu (2).png" style="width: 35px;position: absolute;margin-left: 13px;">
   </div>
   <div>
     <img
@@ -17,15 +17,18 @@
         routerLink="/homeCoach"
         *ngIf="roleType === 'Coach'"
         >Statistics of Players</a
-      >
+      ><img src="../../assets/bar-chart.png" style="width: 30px;margin-left: 10px;">
     </li>
+    
+    
+    
     <li >
       <a
         
         routerLink="/homeCoach/Formation"
         *ngIf="roleType === 'Coach'"
         >Match</a
-      >
+      ><img src="../../assets/football-pitch.png" style="width: 30px;margin-left: 10px;">
     </li>
     <li >
       <a
@@ -33,7 +36,8 @@
         routerLink="/homeCoach/Match"
         *ngIf="roleType === 'Coach'"
         >Formation </a
-      >
+      ><img src="../../assets/ta.png" style="width: 30px;">
+      
     </li>
     <li><a
       
@@ -51,7 +55,7 @@
       
       routerLink="/homeDirecteur/SumOfExternalPlayer"
       *ngIf="roleType === 'Directeur'"
-      >Sum OF Top 10 Players</a
+      >Value OF Top 10 Players</a
     ></li>
     <li><a
       

@@ -194,8 +194,10 @@ nav
 	left: -16.3em;
 	top: 0;
 	bottom: 0;
-	background-color: #245986 ;
-	border-right: 50px solid #245986 ;
+	background-color: #bec4be ;
+	border-right: 50px solid #bec4be ;
+	border-top-right-radius: 25px; /* Adjust the value to control the roundness of the top-right corner */
+	border-bottom-right-radius: 25px;
 	box-shadow: 4px 0 5px rgba(0,0,0,0.2);
 	z-index: 1;
 	cursor: pointer;
@@ -210,10 +212,10 @@ nav:after
 	width: 0;
 	height: 0;
 	right: -89px;
-	top: 7%;
+	top: 50%;
 	border-width: 20px 20px;
 	border-style: solid;
-	border-color: transparent transparent transparent #245986;
+	border-color: transparent transparent transparent #bec4be;
 }
 
 nav ul
@@ -225,10 +227,11 @@ nav ul
 nav a:link, nav a:visited { 
 	display: inline; 
 	font-weight: bold; 
+	font-size: 17px;
 	line-height: 4em; 
 	text-indent: 30px; 
 	text-decoration: none; 
-	color: #fff; 
+	color: #000000; 
 	border-radius: 4px;
 	 outline: 0 none;
 	  margin-left: -20px;
