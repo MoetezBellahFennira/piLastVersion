@@ -25,6 +25,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { ExternalCoachComponent } from './directeur/external-coach/external-coach.component';
+import { ValueOFMyPlayerComponent } from './directeur/value-ofmy-player/value-ofmy-player.component';
+import { ValueOfExternalPlayerComponent } from './directeur/value-of-external-player/value-of-external-player.component';
+import { SumOfExternalPlayerComponent } from './directeur/sum-of-external-player/sum-of-external-player.component';
+import { MatchCoachComponent } from './coach/match-coach/match-coach.component';
+import { FormationCoachComponent } from './coach/formation-coach/formation-coach.component';
+import { ExternalFitnessComponent } from './prepphysique/external-fitness/external-fitness.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +46,13 @@ import { MatButtonModule } from '@angular/material/button';
     MlMedicalComponent,
     DashbordPrepPhysiqueComponent,
     MlPrepPhysiqueComponent,
+    ExternalCoachComponent,
+    ValueOFMyPlayerComponent,
+    ValueOfExternalPlayerComponent,
+    SumOfExternalPlayerComponent,
+    MatchCoachComponent,
+    FormationCoachComponent,
+    ExternalFitnessComponent,
   ],
   imports: [
     BrowserModule,

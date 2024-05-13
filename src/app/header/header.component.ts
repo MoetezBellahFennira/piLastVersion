@@ -1,7 +1,8 @@
 import { AuthConfigService } from './../Service/auth-config.service';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { RoleType } from '../Model/Role';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,13 @@ import { RoleType } from '../Model/Role';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+ 
+  isClosed: boolean = true;
+
+  toggleSidebar() {
+    this.isClosed = !this.isClosed;
+  }
+
   roleType!:any;
   ngOnInit(){
    this.getRoleType()

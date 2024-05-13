@@ -1,22 +1,10 @@
-<div class="container-fluid page">
-    <div class="d-flex page__box p-3 mt-2">Machine Learning</div>
+
+<div class="container">
+  <div >
+    <div class="d-flex page__box p-3 mt-1"><div>Dashboard of Coach</div></div>
+  </div>
     <div class="page__content shadow p-3 position-relative">
-      <div class="page__content-data position-absolute text-center">
-        Welcome to your ML 
-        <br/><br/>
-        <!-- prediction.component.html -->
-        <input type="text" [(ngModel)]="team">
-        <button (click)="predict(team)">Predict</button>
-        <br/><br/><br/>
-        <p *ngIf="predictedRank">Predicted Rank: {{ predictedRank }}</p>
-        <br/><br/>
-        <!-- ml-directeur.component.html -->
-        <div><br/>
-         <button (click)="predictFormation()">Predict Formation</button>
-        </div><br/>
-        <div *ngIf="formationPrediction">Predicted Formation: {{ formationPrediction }}</div>
-
-
-      </div>
+      <div class="full-page-container">
+        Welcome to your ML side of Coach
     </div>
   </div>

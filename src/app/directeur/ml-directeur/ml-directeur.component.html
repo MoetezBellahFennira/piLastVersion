@@ -1,23 +1,10 @@
-<div class="container-fluid page">
-    <div class="d-flex page__box p-3 mt-2">Machine Learning</div>
+
+<div class="container">
+  <div >
+    <div class="d-flex page__box p-3 mt-1">Dashboard</div>
+  </div>
     <div class="page__content shadow p-3 position-relative">
-      <div class="page__content-data position-absolute text-center">
-        <p>Welcome to your ML side</p> 
-        <br>
-        <div>
-          <label for="nomJoueur">Nom du joueur :</label>
-          <input type="text" id="nomJoueur" [(ngModel)]="nomJoueur">
-          <button (click)="predictValue()">Prédire</button>
-        </div><br>
-
-        <div>
-         <p *ngIf="predictedValue">La valeur prédite pour {{ nomJoueur }} est {{ predictedValue }} M £</p>
-        </div><br>
-
-        <div *ngIf="error">
-          <p>{{ error }}</p>
-        </div>
-
-      </div>
+      <div class="full-page-container">
+        Welcome to your ML side of directeur
     </div>
   </div>

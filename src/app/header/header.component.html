@@ -1,41 +1,149 @@
-<mat-toolbar>
-    <mat-toolbar-row class="justify-content-between">
+<!-- menu -->
+<nav>
+  <div style="position: absolute; right: 0;padding-top: 48px;">
+    <img src="../../assets/side-menu.png" style="width: 50px;position: absolute;">
+  </div>
+  <div>
+    <img
+      src="../../assets/fotifiz.png"
+      style="width: 200px; margin-left: 30px"
+    />
+  </div>
+<div >
+  <ul>
+    <li >
+      <a
+        
+        routerLink="/homeCoach"
+        *ngIf="roleType === 'Coach'"
+        >Statistics of Players</a
+      >
+    </li>
+    <li >
+      <a
+        
+        routerLink="/homeCoach/Formation"
+        *ngIf="roleType === 'Coach'"
+        >Match</a
+      >
+    </li>
+    <li >
+      <a
+        
+        routerLink="/homeCoach/Match"
+        *ngIf="roleType === 'Coach'"
+        >Formation </a
+      >
+    </li>
+    <li><a
       
-     <a class="btn btn-outline-primary" routerLink="/homeCoach" *ngIf="roleType==='Coach'"><mat-icon >dashboard </mat-icon>dashbordCoach</a>
-      <a class="btn btn-outline-primary"routerLink="/homeDirecteur" *ngIf="roleType==='Directeur'"><mat-icon style="margin-right: 15px;">dashboard </mat-icon>dashbord Directeur</a>
-      <a class="btn btn-outline-primary"routerLink="/homeMedical" *ngIf="roleType==='StaffMedical'"><mat-icon style="margin-right: 15px;">dashboard </mat-icon>dashbord preparateur Medical</a>
-      <a class="btn btn-outline-primary"routerLink="/homeprepphysique" *ngIf="roleType==='StaffPhysique'"><mat-icon >dashboard </mat-icon>dashbord Preparateur physique</a>
-
+      routerLink="/homeDirecteur"
+      *ngIf="roleType === 'Directeur'"
+      >Intern Coach</a
+    ></li>
+    <li><a
       
-      <a class="btn btn-outline-primary" routerLink="/homeCoach/MlCoach" *ngIf="roleType=='Coach'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml Coach</a>
-      <a class="btn btn-outline-primary"routerLink="/homeDirecteur/MlDirecteur"*ngIf="roleType=='Directeur'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml Directeur</a>
-      <a class="btn btn-outline-primary"routerLink="/homeMedical/MlMedical"*ngIf="roleType=='StaffMedical'" ><mat-icon style="margin-left: 15px;">code</mat-icon>Ml preparateur Medical</a>
-      <a class="btn btn-outline-primary"routerLink="/homeprepphysique/MlPrephysique" *ngIf="roleType=='StaffPhysique'"><mat-icon >code</mat-icon>Ml Preparateur physique</a>
+      routerLink="/homeDirecteur/ExternalCoach"
+      *ngIf="roleType === 'Directeur'"
+      >External Coach</a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/SumOfExternalPlayer"
+      *ngIf="roleType === 'Directeur'"
+      >Sum OF Top 10 Players</a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/ValueOfMyPlayer"
+      *ngIf="roleType === 'Directeur'"
+      >Value of my player</a
+    ></li>
+    <li><a
+      
+      routerLink="/homeDirecteur/ValueOfExtrernalPlayer"
+      *ngIf="roleType === 'Directeur'"
+      >Value of External player</a
+    ></li>
 
-      <!-- <a routerLink="/login" ><mat-icon style="margin-left: 15px;">code</mat-icon>login</a> -->
 
-      <div class="row mr-2 ml-auto">
-        <ul class="row m-0 align-items-center">
-          <li>
-            <button
-              mat-button
-              [matMenuTriggerFor]="menu"
-              class="user mt-2 d-flex align-items-center"
-              >
-              <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+
+
+    <li style="display: inline;">
+      
+      <a routerLink="/homeMedical" *ngIf="roleType === 'StaffMedical'"
+        >Dashbord Medical</a
+      >
+
+      <!-- <mat-icon>dashboard </mat-icon> -->
+    </li>
+    <li>
+      <a routerLink="/homeprepphysique" *ngIf="roleType === 'StaffPhysique'"
+        >Dashbord Fitness trainer</a
+      >
+    </li>
+    <li>
+      <a routerLink="/homeprepphysique/ExternalFitness" *ngIf="roleType === 'StaffPhysique'"
+        >Dashbord External fitness</a
+      >
+    </li>
+
+    <a
+      
+      routerLink="/homeCoach/MlCoach"
+      *ngIf="roleType == 'Coach'"
+      >Ml Coach</a
+    >
+    <a
+      
+      routerLink="/homeDirecteur/MlDirecteur"
+      *ngIf="roleType == 'Directeur'"
+      >Ml Directeur</a
+    >
+    <li style="display: inline; position: relative; margin-top: auto;">
+      
+      <a   
+        routerLink="/homeMedical/MlMedical"
+        *ngIf="roleType == 'StaffMedical'"
+        >ML preparateur Medical</a
+      >
+    </li>
+    <li>
+    <a
+      
+      routerLink="/homeprepphysique/MlPrephysique"
+      *ngIf="roleType == 'StaffPhysique'"
+      >Ml Preparateur physique</a
+    >
+  </li>
   
-              User Name
-              <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon >
-            </button>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item (click)="logout()">
-                <mat-icon>exit_to_app</mat-icon>
-                Logout
-              </button>
-            </mat-menu>
-          </li>
-        </ul>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  </ul>
+
+</div>
+
+  <div style="margin-left: 20px;margin-top: 60px;">
+    <li>
+      <button
+        mat-button
+        [matMenuTriggerFor]="menu"
+        class="user mt-2 d-flex align-items-center"
+      >
+        <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+
+        User
+        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+    </li>
+  </div>
+</nav>
+
+<!-- main article -->
+<article style="width: 120vw; height: 100vh; margin-left: -130px; padding: 0">
   <router-outlet></router-outlet>
+</article>
